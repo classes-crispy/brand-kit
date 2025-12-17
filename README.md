@@ -39,6 +39,18 @@ Located in [/fonts](fonts/).
 
 ![LogoType](logo/Logotype/Digital/Base_lockup_2color.svg)
 
+## Asset manifest
+
+This repo includes an `asset-manifest.json` file to make it easier to discover available brand assets (logos, guides, fonts, etc.).
+
+### Regenerating the manifest
+
+If you add, remove, or rename assets, regenerate the manifest:
+
+```bash
+python3 scripts/generate_asset_manifest.py
+
+
 ![BaseMark](logo/Basemark/Digital/Base_basemark_blue.svg)
 
 | Symbol                                            | Wordmark                                                |
