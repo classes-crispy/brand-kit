@@ -1,0 +1,25 @@
+name: Validate asset manifest
+
+on:
+  pull_request:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate manifest
+        run: python3 scripts/generate_asset_manifest.py
+
+      - name: Ensure manifest is committed
+        run: |
+          git diff --exit-code asset-manifest.json
