@@ -49,7 +49,7 @@ If you add, remove, or rename assets, regenerate the manifest:
 
 ```bash
 python3 scripts/generate_asset_manifest.py
-
+```
 
 ![BaseMark](logo/Basemark/Digital/Base_basemark_blue.svg)
 
